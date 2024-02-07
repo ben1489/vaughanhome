@@ -1,0 +1,12 @@
+version: "1.0"
+
+services:
+  # jupyterlab with pyspark
+  pyspark:
+    image: jupyter/pyspark-notebook:latest
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    ports:
+      - "9999:8888"
+    volumes:
+      - /home/pi/Documents/jupyter_notebook:/home/jovyan/work
