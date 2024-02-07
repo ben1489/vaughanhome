@@ -6,6 +6,7 @@ services:
     image: jupyter/pyspark-notebook:latest
     environment:
       JUPYTER_ENABLE_LAB: "yes"
+      - JUPYTER_TOKEN=iambatman
     ports:
       - "9999:8888"
     volumes:
