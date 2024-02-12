@@ -4,6 +4,8 @@ services:
   # jupyterlab with pyspark
   pyspark:
     image: jupyter/pyspark-notebook:latest
+    restart: unless-stopped
+    container_name: jupyter_notebook
     environment:
       - JUPYTER_ENABLE_LAB=yes
       - JUPYTER_TOKEN=iambatman
