@@ -11,3 +11,4 @@ services:
       - "9999:8888"
     volumes:
       - /home/pi/Documents/jupyter_notebook:/home/jovyan/work
+    restart: unless-stopped
