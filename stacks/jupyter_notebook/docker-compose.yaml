@@ -5,10 +5,9 @@ services:
   pyspark:
     image: jupyter/pyspark-notebook:latest
     environment:
-      JUPYTER_ENABLE_LAB: "yes"
+      - JUPYTER_ENABLE_LAB=yes
       - JUPYTER_TOKEN=iambatman
     ports:
       - "9999:8888"
     volumes:
       - /home/pi/Documents/jupyter_notebook:/home/jovyan/work
-    restart: unless-stopped
